@@ -14,7 +14,7 @@ compile_main() {
 
     # Check if main.c exists
     if [ -f "main.c" ]; then
-        gcc main.c -o build/release/main
+        gcc main.c src/server.h src/server.c -o build/release/main
         echo "Compilation successful. Executable created in build/release."
     else
         echo "main.c file not found. Please ensure the file exists in the current directory."
